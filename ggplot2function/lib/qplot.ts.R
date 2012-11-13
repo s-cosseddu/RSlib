@@ -57,8 +57,7 @@ qplot.ts <- function(x, window.length=NULL,var.name="variable", val.name="value"
   }
 
   if (!print.smooth && smoothonly) {
-    print("plot.ts.smooth error: if smoothonly and window.length must be passed")
-    return()
+    stop("qplot.ts error: if smoothonly is T, window.length must be passed")
   }
   
   ## creating smooth trajectory
