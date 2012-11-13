@@ -19,9 +19,9 @@
 
 
 qplot.ts <- function(x, window.length=NULL,var.name="variable", val.name="value",
-                     smoothonly=FALSE, facet=FALSE, facetscale="free", title=NULL,
+                     smoothonly=FALSE, facet=T, facetscale="free", title=NULL,
                      xlab="x", ylab="y", xlim=NULL, ylim=NULL, ref=NULL,
-                     legend=TRUE, add=NULL, ts.names=NULL, ...) {
+                     legend=F, add=NULL, ts.names=NULL, ...) {
 
   require(ggplot2)
   require(reshape2)
@@ -243,28 +243,28 @@ qplot.ts <- function(x, window.length=NULL,var.name="variable", val.name="value"
  
 
 ## working on a ts on different facets
-gggg <- ts (
-  cbind (rnorm(2000, 10, 0.2),
-         rnorm(2000, 9, 0.2)), deltat=0.01
-  )
+## gggg <- ts (
+##   cbind (rnorm(2000, 10, 0.2),
+##          rnorm(2000, 9, 0.2)), deltat=0.01
+##   )
 
-qplot.ts( x=gggg, window.length=20,var.name="Friends", facet=TRUE, facetscale="fixed", title="test", xlab="r", ylab="gr", xlim=NULL, ylim=NULL, legend=TRUE, add=NULL, ts.names=c("mice","cats"))
+## qplot.ts( x=gggg, window.length=20,var.name="Friends", facet=TRUE, facetscale="fixed", title="test", xlab="r", ylab="gr", xlim=NULL, ylim=NULL, legend=TRUE, add=NULL, ts.names=c("mice","cats"))
 
 
-qplot.ts( x=gggg, window.length=21,var.name="Friends", facet=FALSE, facetscale="fixed", title="test", xlab="r", ylab="gr", xlim=NULL, ylim=NULL, legend=FALSE, add=NULL, ts.names=c("mice","cats"))
+## qplot.ts( x=gggg, window.length=21,var.name="Friends", facet=FALSE, facetscale="fixed", title="test", xlab="r", ylab="gr", xlim=NULL, ylim=NULL, legend=FALSE, add=NULL, ts.names=c("mice","cats"))
 
-colnames(gggg) <- c("Mike", "Joe")
-qplot.ts( x=gggg, window.length=101, var.name="Friends", facet=T, facetscale="free", title="test", xlab="x", ylab="y", ylim=range(5,12), legend=T, ref=c(9.5,6.5))
+## colnames(gggg) <- c("Mike", "Joe")
+## qplot.ts( x=gggg, window.length=101, var.name="Friends", facet=T, facetscale="free", title="test", xlab="x", ylab="y", ylim=range(5,12), legend=T, ref=c(9.5,6.5))
 
-## playing with several options
-gggg2 <- rnorm(2000, 8, 0.2)
-data1 <- qplot.ts( x=gggg2, window.length=101, smoothonly=T, var.name="Friends", facet=F, title="test", xlab="x", ylab="y", ts.names="Mike", ref=7, size=2)
+## ## playing with several options
+## gggg2 <- rnorm(2000, 8, 0.2)
+## data1 <- qplot.ts( x=gggg2, window.length=101, smoothonly=T, var.name="Friends", facet=F, title="test", xlab="x", ylab="y", ts.names="Mike", ref=7, size=2)
 
-gggg3 <- rnorm(2000, 5, 0.2)
-data1 <- qplot.ts( x=gggg3, window.length=101, var.name="Friends", facet=F, title="test", xlab="x", ylab="y", add=data1, ts.names="Joe",legend=T,ref=4.5)
+## gggg3 <- rnorm(2000, 5, 0.2)
+## data1 <- qplot.ts( x=gggg3, window.length=101, var.name="Friends", facet=F, title="test", xlab="x", ylab="y", add=data1, ts.names="Joe",legend=T,ref=4.5)
 
-gggg4 <- rnorm(2000, 3, 0.2)
-qplot.ts( x=gggg4, var.name="Friends", facet=F, title="test", xlab="x", ylab="y", add=data1, ts.names="Frank",legend=T)
+## gggg4 <- rnorm(2000, 3, 0.2)
+## qplot.ts( x=gggg4, var.name="Friends", facet=F, title="test", xlab="x", ylab="y", add=data1, ts.names="Frank",legend=T)
 
 
 
