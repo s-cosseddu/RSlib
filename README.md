@@ -1,16 +1,15 @@
 RSlib
 =====
 
-
-===================================================================================
-Title       : README
+*******************************************************
 Author      : Salvatore Cosseddu - S.M.Cosseddu@warwick.ac.uk                   
-Institution : University of Warwick - Centre for Scientific Computing and	  
-                                        School of Engineering			  
+Institution : University of Warwick 
+	    Centre for Scientific Computing and	School of Engineering			  
 Description : R library containing useful functions written by SMCosseddu, PhD student, University of Warwick  
 Written on Tuesday, 13 November 2012.
 Version     : 0.01								  
  										  
+------
 										  
   COPYRIGHT					       				  
   Copyright © 2012.Salvatore Cosseddu		       				  
@@ -18,8 +17,8 @@ Version     : 0.01
   License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>. 
   This is free software: you are free to change and redistribute it.         	  
   There is NO WARRANTY, to the extent permitted by law.          		  
-										  
-===================================================================================
+
+*******************************************************					  
 
 
 The present repository contains R functions written by Salvatore Cosseddu for his PhD project. 
