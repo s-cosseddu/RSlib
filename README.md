@@ -14,7 +14,6 @@ Available functions:
 ------
 
 1. _qplot.ts_ : (quick plot time series) a version of plot.ts that uses ggplot2 packages, adding some nice features to plot.ts:  
-
   *   the object obtained can be easily modified using ggplot2 grammar, adding or changhing properties;
   *   a smooth coloured line can be added (moving average is the only implemented at the moment, just because that is what I needed);
   *   optional legend is automatically added in the ggplot2 style;
@@ -27,7 +26,6 @@ Available functions:
   commonly used to plot ts with ggplot2
 
 2. _qplot.density_ : (quick density plot) uses ggplot2 packages to plot several distributions:
-
   *   the object obtained can be easily modified using ggplot2 grammar, adding or changhing properties;
   *   optional legend is automatically added in the ggplot2 style;
   *   facetting optionally available;
