@@ -1,0 +1,34 @@
+###################################################################################
+#: Title       : README
+#: Author      : Salvatore Cosseddu - S.M.Cosseddu@warwick.ac.uk                  #
+#: Institution : University of Warwick - Centre for Scientific Computing and	  #
+#                                        School of Engineering			  #
+#: Description : SMC R function library
+#: Written on Tuesday, 13 November 2012.
+#: Version     : 0.01								  #
+# 										  #
+#										  #
+#  COPYRIGHT					       				  #
+#  Copyright © 2012.Salvatore Cosseddu		       				  #
+#  Centre for Scientific Computing, University of Warwick.		       	  #
+#  License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>. #
+#  This is free software: you are free to change and redistribute it.         	  #
+#  There is NO WARRANTY, to the extent permitted by law.          		  #
+#										  #
+###################################################################################
+
+The present repository contains R functions written by Salvatore Cosseddu for his PhD project. 
+They were not developed to be neither complete nor user friendly, but to fulfil his needs. 
+But anyway you might find something useful. 
+
+Available function:
+
+- qplot.ts: (quick plot time series) a version of plot.ts that uses ggplot2 packages, adding some nice features to plot.ts:
+  	    a) the object obtained can be easily modified using ggplot2 grammar, adding or changhing properties;
+	    b) a smooth coloured line can be added (moving average is the only implemented at the moment, just because that is what I needed);
+	    c) optional legend is automatically added in the ggplot2 style;
+	    d) add option available;
+	    e) facetting optionally available (default TRUE);
+	    f) more than 10 ts can be plotted.
+  The function is an implementation of a simple method of creating a data.frame from the time series using the package reshape2, 
+  commonly used to plot ts with ggplot2
