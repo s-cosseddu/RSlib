@@ -6,7 +6,7 @@ Version     : 0.01
 Description : 
 -----------
 
-The present repository contains R functions written by Salvatore Cosseddu for his PhD project. 
+The present repository contains R functions written by Salvatore Cosseddu for his PhD project (School of engineering, University of Warwick). 
 They were not developed to be neither complete nor user friendly, but to fulfil his needs. 
 But anyway you might find something useful. 
 
